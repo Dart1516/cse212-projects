@@ -11,6 +11,21 @@ public static class ArraySelector
 
     private static int[] ListSelector(int[] list1, int[] list2, int[] select)
     {
+        for (int numeroDeLaLista = 0; numeroDeLaLista < select.Length; numeroDeLaLista++)
+        {
+            if ( select[numeroDeLaLista] == 1)
+            {
+                return list1;
+            }
+            else if ( select[numeroDeLaLista] == 2)
+            {
+                return list2;
+            }
+            else
+            {
+                Console.WriteLine("Invalid selection");
+            }
+        }
         return [];
     }
 }

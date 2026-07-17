@@ -24,7 +24,32 @@
 
     private static int CountDuplicates(int[] data)
     {
-        // Add code here.
-        return 0;
+        
+        int totalNumerosDuplicados=0;
+        foreach (var grupo in data.GroupBy( n => n))
+        {
+            totalNumerosDuplicados += grupo.Count() -1;
+
+        };
+        
+        // otra forma de ahcerlo seria 
+
+        HashSet<int> ListaNueva = new();
+        int numerosDuplicadosDelHash = 0;
+        foreach(var numero in data)
+        {
+            if (ListaNueva.Contains(numero))
+            {
+                numerosDuplicadosDelHash++;
+            } else
+            {
+                ListaNueva.Add(numero);
+            }
+        } 
+
+
+
+
+        return totalNumerosDuplicados;
     }
 }

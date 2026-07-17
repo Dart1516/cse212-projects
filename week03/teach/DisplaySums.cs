@@ -28,6 +28,19 @@
     /// </summary>
     /// <param name="numbers">array of integers</param>
     private static void DisplaySumPairs(int[] numbers) {
+
+        HashSet<int> ListaSinDuplicados = new();
+        foreach (var numero in numbers)
+        {
+            int numero_que_falta = 10 - numero;
+            
+         
+            if ( ListaSinDuplicados.Contains(numero_que_falta))
+            {
+                Console.WriteLine($" los numeros que suman 10 som: {numero} y {numero_que_falta}");
+            }
+            ListaSinDuplicados.Add(numero);
+        }
         // TODO Problem 2 - This should print pairs of numbers in the given array
     }
 }

@@ -32,6 +32,7 @@
     {
         // Add code here.
         var unique = new HashSet<int>();
+        
         var duplicates = 0;
 
         foreach (var x in data)
